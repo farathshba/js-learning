@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Test App</title>
+</head>
+<body>
+	<center>
+	    <img id="left" style="width:10%; float:left; padding:1.3%" src="./arrow-left.png" />
+
+	    <div >
+	        <img id="slider" style="width:75%; float:left" src="images/apple-1.png" />
+	    </div>
+
+	    <img id="right" style="width:10%; float:left; padding:1.2%" src="./arrow-right.png" />
+	</center>
+</body>
+<script src="../../lib/jquery-3.4.1.min.js"></script>
+<script>
+var count = 0;
+$(function slider () {
+    var images = [
+                    "images/apple-1.png",
+                    "images/asparagus.png",
+                    "images/avocado.png",
+                    "images/banana.png"
+                  ];
+
+    $("#right").click(function () {
+        ++count;
+        var img = images[count % images.length];
+        //alert(img);
+        $("#slider").attr("src", img);
+        //alert("clicked");
+        slider();
+    });
+    $("#left").click(function () {
+        if(count == 0)
+        {
+            count = images.length-1;
+        }
+        else {
+            --count;
+        }
+
+        var img = images[count % images.length];
+        //alert(img);
+        $("#slider").attr("src", img);
+        //alert("clicked");
+        slider();
+    });
+    slider();
+});
+</script>
+</html>
