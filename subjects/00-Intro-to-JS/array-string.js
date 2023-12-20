@@ -20,6 +20,7 @@ if (myString.indexOf("average") === -1) {
 var string1 = "abc";
 var string2 = "bcd";
 var string3 = "ABC";
+var emptystring;
 
 console.log(string1 === string2);
 console.log(string1.toLowerCase() === string3.toLowerCase());
