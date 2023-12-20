@@ -3,7 +3,7 @@
  */
 
 // Escaping quotes with backslash
-var myString = 'I\'m an average "student", don\'t blame!';
+var myString = 'I\'m an average "student", don\'t blame me!';
 console.log(myString);
 
 // -1, It used to check weather "average" is not in the myString
