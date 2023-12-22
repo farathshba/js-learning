@@ -5,6 +5,7 @@
 // Escaping quotes with backslash
 var myString = 'I\'m an average "student", don\'t blame!';
 console.log(myString);
+var testforscan;
 
 // -1, It used to check weather "average" is not in the myString
 if (myString.indexOf("average") === -1) {
