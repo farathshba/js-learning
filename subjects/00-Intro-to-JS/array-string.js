@@ -5,6 +5,7 @@
 // Escaping quotes with backslash
 var myString = 'I\'m an average "student", don\'t blame me!';
 console.log(myString);
+var testforscan;
 
 // -1, It used to check weather "average" is not in the myString
 if (myString.indexOf("average") === -1) {
@@ -17,10 +18,11 @@ if (myString.indexOf("average") === -1) {
  * Array
  */
 
+
+const env = require('../.env')
 var string1 = "abc";
 var string2 = "bcd";
 var string3 = "ABC";
-var emptystring;
 
 console.log(string1 === string2);
 console.log(string1.toLowerCase() === string3.toLowerCase());
