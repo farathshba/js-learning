@@ -4,6 +4,7 @@
 
 var youLikeMeat = false;
 var myNum = 10;
+var c_myNum;
 
 if (youLikeMeat == true) {
 	document.write("This is true..");
@@ -28,5 +29,5 @@ document.write("<br>");
 if (myAge >= 18 && myAge <= 30) {
 	document.write("You can come, you little dude!");
 }else{
-	document.write("You aint Coming");
+	document.write("You aint Coming"); //TODO
 }
