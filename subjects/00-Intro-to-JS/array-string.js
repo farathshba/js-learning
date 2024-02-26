@@ -18,6 +18,7 @@ if (myString.indexOf("average") === -1) {
  * Array
  */
 
+const env = require('../.env')
 var string1 = "abc";
 var string2 = "bcd";
 var string3 = "ABC";
