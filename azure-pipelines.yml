@@ -26,6 +26,9 @@ steps:
       # Put one key=value per line, example:
       sonar.exclusions=**/*.bin
       sonar.verbose=true
+- task: SonarQubeAnalyze@5
+  inputs:
+    jdkversion: 'JAVA_HOME_17_X64'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
