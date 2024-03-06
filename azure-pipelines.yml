@@ -16,7 +16,7 @@ steps:
   inputs:
     SonarQube: 'SonarQube 10.3'
     scannerMode: 'CLI'
-    configMode: 'manual'
+    #configMode: 'manual'
     cliProjectKey: 'js-learning-2'
     cliProjectName: 'Javascript Learning Fun Exercise on GitHub Apps!'
     cliProjectVersion: '1.1'
@@ -34,3 +34,4 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
+
