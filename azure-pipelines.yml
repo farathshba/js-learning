@@ -25,7 +25,21 @@ steps:
       # Additional properties that will be passed to the scanner, 
       # Put one key=value per line, example:
       sonar.exclusions=**/*.bin
+- task: SonarQubePrepare@5
+  inputs:
+    SonarQube: 'SonarQube 10.3'
+    scannerMode: 'CLI'
+    configMode: 'manual'
+    cliProjectKey: 'js-learning-2'
+    cliProjectName: 'Javascript Learning Fun Exercise on GitHub Apps!'
+    cliProjectVersion: '1.1'
+    cliSources: '.'
+    extraProperties: |
+      # Additional properties that will be passed to the scanner, 
+      # Put one key=value per line, example:
+      # sonar.exclusions=**/*.bin
       sonar.verbose=true
+      
 - task: SonarQubeAnalyze@5
   inputs:
     jdkversion: 'JAVA_HOME_17_X64'
