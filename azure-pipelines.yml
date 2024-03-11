@@ -24,8 +24,8 @@ steps:
     extraProperties: |
       # Additional properties that will be passed to the scanner, 
       # Put one key=value per line, example:
+      sonar.verbose=true 
       sonar.exclusions=**/*.bin
-      sonar.verbose=true
 - task: SonarQubePrepare@5
   inputs:
     SonarQube: 'SonarQube 10.3'
