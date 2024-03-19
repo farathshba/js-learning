@@ -1,0 +1,38 @@
+# Starter pipeline
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: ubuntu-latest
+
+steps:
+- script: echo Hello, world!
+  displayName: 'Run a one-line script'
+- task: SonarQubePrepare@5
+  inputs:
+    SonarQube: 'SonarQube 10.3'
+    scannerMode: 'CLI'
+    #configMode: 'manual'
+    cliProjectKey: 'js-learning-2'
+    cliProjectName: 'Javascript Learning Fun Exercise on GitHub Apps!'
+    cliProjectVersion: '1.1'
+    cliSources: '.'
+    extraProperties: |
+      # Additional properties that will be passed to the scanner, 
+      # Put one key=value per line, example:
+      sonar.verbose=true
+      sonar.exclusions=**/*.bin
+      
+- task: SonarQubeAnalyze@5
+  inputs:
+    jdkversion: 'JAVA_HOME_17_X64'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
+
