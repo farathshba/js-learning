@@ -8,7 +8,8 @@ const animalsWild = [
   'snake',
   'pigeon',
   'shark',
-  'lion'
+  'lion',
+  'giraffe'
 ];
 const animalsPet = ['cat', 'rabbit', 'pigeon'];
 //const animalsOthers = ["deer", "turtle", "crab", "cow", "elephant"]
